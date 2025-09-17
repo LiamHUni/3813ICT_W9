@@ -1,10 +1,12 @@
 exports.add = async function(collection, req, res){
     const {product} = req.body;
-    const items = await collection.find({id:product.id})
-    if(items.length>0){
-        res.json({err:"duiplicate id"});
+    console.log(product);
+    const items = await collection.countDocuments({id:product.id});
+    console.log(items);
+    if(items>0){
+        res.json({err:"Duplicate ID: Please use different ID"});
     }else{
-        await collection.insertOne(itemInfo);
+        await collection.insertOne(product);
         res.json({mess:"Item added"});
     }
 }

@@ -63,6 +63,7 @@ app.post('/update', async function(req,res){
 
 app.post('/remove', async function(req,res){
     await connectMongo();
+    console.log("removing");
     await remove(collection, req, res);
     client.close();
 });

@@ -1,0 +1,23 @@
+<form>
+    <div class="mb-4">
+        <label for="id" class="form-label" >Product ID</label>
+        <input [(ngModel)]="prod.id" type="number" name="id" id="id" class="form-control" />
+    </div>
+    <div class="mb-4">
+        <label for="name" class="form-label" >Product Name</label>
+        <input [(ngModel)]="prod.name" type="text" name="name" id="name" class="form-control" />
+    </div>
+    <div class="mb-4">
+        <label for="desc" class="form-label" >Product Description</label>
+        <input [(ngModel)]="prod.desc" type="text" name="desc" id="desc" class="form-control" />
+    </div>
+    <div class="mb-4">
+        <label for="price" class="form-label" >Price</label>
+        <input [(ngModel)]="prod.price" type="number" name="price" id="price" class="form-control" />
+    </div>
+    <div class="mb-4">
+        <label for="units" class="form-label" >Units</label>
+        <input [(ngModel)]="prod.units" type="number" name="units" id="units" class="form-control" />
+    </div>
+    <button (click)="submit()" type="submit" class="btn btn-primary">Create Item</button>
+</form>
